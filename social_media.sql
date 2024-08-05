@@ -54,3 +54,9 @@ SELECT user_id, COUNT(post_id) AS PostCount
 FROM Posts
 GROUP BY user_id
 HAVING COUNT(post_id) > 5;
+
+select user_id, count(country) as percountry
+from Users
+group by user_id
+having max(country)
+limit 3;
